@@ -1,0 +1,119 @@
+.navbarboob{
+  animation: ani 4s infinite linear;
+}
+@keyframes ani {
+ 
+0%{
+     transform: rotate(0deg);
+}
+50% {
+    transform: rotate(3deg);
+}
+75% {
+    transform: rotate(0deg);
+}
+90% {
+    transform: rotate(-3deg);
+}   
+}
+#popular img{
+    margin-top: -30px;
+    animation: king5 3s infinite linear;
+}
+@keyframes king5{
+    0%{
+        margin-top: -15px;
+    }25%{
+        margin-top: -35px;
+    }50%{
+        margin-top: -20px;
+    }75%{
+        margin-top: -35px;
+    }100%{
+        margin-top: -15px;
+    }
+}
+.tasty{
+    /* margin-top: -20px;
+    margin-left: -50px; */
+    top: 0px;
+    position: absolute;
+    z-index: 1;
+    animation: ani 4s infinite linear;
+  }
+  @keyframes ani {
+    0%{
+        width: 110%;
+    }
+    25%{
+        width: 115%;
+    }
+    50%{
+        width: 110%;
+    }
+    75%{
+        width: 115%;
+    }
+    100%{
+        width: 110%;
+    }
+}
+.motion:hover{
+    animation: min 2s ;
+  } 
+    @keyframes min{
+        from{
+            transform: rotate(0deg);
+        }to{
+            transform: rotate(360deg);
+        }
+    }
+    .home{
+        border-right: 1px dashed rgba(0, 0, 0, 0.562);
+    }
+    
+    .firstmenu{
+      border-bottom-left-radius:50px; 
+    }
+    .secmenu{
+   border-top-right-radius: 30px;
+    }
+    .overlay{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #ff9d2d;
+        border-radius: 25px 25px 0 25px;
+        z-index: -1;
+    }
+    .overlay::after,
+    .overlay::before{
+        content: " ";
+        position: absolute;
+        right: 0;
+        bottom: -40px;
+        height: 40px;
+        width: 40px;
+        background-color: #ff9d2d;
+    }
+    .overlay::after{
+        border-radius: 0 25px 0 0;
+        background-color: #FFF;
+    }
+    .slick-next:before, .slick-prev:before{
+        position: absolute;
+        background:#ff9d2d ;
+        padding: 16px;
+        border-radius: 50px;
+        margin-left: -28px;
+    }
+    .lobster-regular {
+        font-family: "Lobster Two", sans-serif;
+  font: bold;
+  font-weight: bolder;
+
+  font-style:italic;
+      }
+      
