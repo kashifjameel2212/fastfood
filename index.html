@@ -1,690 +1,207 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burger boy</title>
+    <title>Burger</title>
     <!-- tailwind link -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/assets/js/tailwind.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans&family=Saira:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="/tailwind.js"></script>
+    <!--Fonts link-->
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&amp;family=Open+Sans:wght@600&amp;display=swap" rel="stylesheet">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&amp;family=Lobster&amp;family=Open+Sans:wght@800&amp;display=swap" rel="stylesheet">  
+    <!-- cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Saira:wght@700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans&family=Saira:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+<!-- bootstrap links -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- nav section -->
-    <nav class="flex  items-center px-2 justify-between ">
-        <div class="container lg:hidden mx-auto  items-center justify-between navbar">
-        <div class="lg:flex md:flex  justify-between items-center py-4">
-            <div class="flex justify-between items-center px-2">
-            <img class="w-20 md:w-full" src="assets/images/logo.svg" alt="" srcset="">   
-        <div class="text-black    text-lg lg:hidden px-2 ">
-            <i id="navbar-btn" class="fa-solid fa-bars"></i>
-          </div>
-        </div>
-            <ul id="navbar-menu" class="dropdown-menu text-xl gap-3 py-8 pr-40 text-white lg:text-xl font-medium">
-                <li class="text-[#eb0029] "><a href=""></a>HOME</li>
-                <li class="text-gray-400  hover:text-[#eb0029] "><a href=""></a>ABOUT US</li>
-                <li class="text-gray-400  hover:text-[#eb0029] "><a href=""></a>MENU</li>
-                <li class="text-gray-400  hover:text-[#eb0029] "><a href=""></a>SHOP</li>
-                <li class="text-gray-400  hover:text-[#eb0029] whitespace-nowrap"><a href=""></a>CONTACT US</li>
-                <div class="flex gap-3  lg:hidden md:hidden  font-normal">
+    <!-- navbar -->
+    <nav>
+        <div class="container lg:flex justify-between items-center ">
+            <div class="flex justify-between items-center">
+                <a href=""><img class="lg:w-2/3 md:w-2/3 w-2/4 py-2" src="assets/images/logo.svg" alt=""></a>
+                <div id="menu-navbar" class="lg:hidden">
+                    <i class="fa-solid fa-bars border border-gray-300 p-1 px-2 rounded-sm text-gray-500"></i>
+                </div>
+            </div>
+            <ul id="slide-navbar"
+                class="hidden lg:flex gap-8 lg:text-xl text-gray-500 md:text-lg text-sm items-center  lg:py-0 md:py-0 py-5">
+                <li class="text-[#eb0029]">HOME</li>
+                <li class="hover:text-[#eb0029] whitespace-nowrap">ABOUT US</li>
+                <li class="hover:text-[#eb0029]">MENU</li>
+                <li class="hover:text-[#eb0029]">SHOP</li>
+                <li class="hover:text-[#eb0029] whitespace-nowrap">CONTACT US</li>
+                <div class="whitespace-nowrap lg:ml-32">
                     <button
-                        class="bg-orange-400 px-4 py-1 text-xl rounded-full whitespace-nowrap text-white hover:bg-orange-500 duration-500">SIGN
+                        class="bg-[#fa9016c5] lg:text-xl md:text-xl text-sm lg:px-3 lg:py-2 md:px-3 md:py-2 px-2 py-1 text-white hover:bg-orange-400 rounded-3xl">SIGN
                         UP</button>
-                    <button class="bg-red-400 px-4 py-1 text-xl rounded-full whitespace-nowrap text-white  hover:bg-red-500 duration-500">LOG
+                    <button
+                        class="bg-[#f82548b6] lg:text-xl md:text-xl text-sm lg:px-3 lg:py-2 md:px-3 md:py-2 px-2 py-1  text-white hover:bg-red-500 rounded-3xl">LOG
                         IN</button>
                 </div>
             </ul>
-            <div class="flex gap-3 hidden font-normal">
+            <div class="whitespace-nowrap hidden">
                 <button
-                    class="bg-orange-400 px-4 py-2 text-2xl rounded-full text-white hover:bg-orange-500 duration-500">SIGN
+                    class="bg-[#fa9016c5] lg:text-xl md:text-xl text-sm lg:px-3 lg:py-2 md:px-3 md:py-2 px-2 py-1 text-white hover:bg-orange-400 rounded-3xl">SIGN
                     UP</button>
-                <button class="bg-red-400 px-4 py-2 text-2xl rounded-full text-white  hover:bg-red-500 duration-500">LOG
+                <button
+                    class="bg-[#f82548b6] lg:text-xl md:text-xl text-sm lg:px-3 lg:py-2 md:px-3 md:py-2 px-2 py-1  text-white hover:bg-red-500 rounded-3xl">LOG
                     IN</button>
             </div>
         </div>
-        </div>
     </nav>
-    <nav class="flex items-center hidden md:block lg:block">
-        <div class="container mx-auto flex items-center justify-between navbar">
-        <div class="lg:flex md:flex  justify-between items-center py-4">
-            <img class="w-20 md:w-full" src="assets/images/logo.svg" alt="" srcset="">
-            <ul class=" text-xl lg:flex gap-8  pr-40  whitespace-nowrap px-24 justify-center text-white lg:text-xl font-medium">
-                <li class="text-[#eb0029] "><a href=""></a>HOME</li>
-                <li class="text-gray-400  hover:text-[#eb0029] "><a href=""></a>ABOUT US</li>
-                <li class="text-gray-400  hover:text-[#eb0029] "><a href=""></a>MENU</li>
-                <li class="text-gray-400  hover:text-[#eb0029] "><a href=""></a>SHOP</li>
-                <li class="text-gray-400  hover:text-[#eb0029] "><a href=""></a>CONTACT US</li>
-            </ul>
-            <div class="flex gap-3  font-normal">
-                <button
-                    class="bg-orange-400 px-4 py-2 whitespace-nowrap text-2xl rounded-full text-white hover:bg-orange-500 duration-500">SIGN
-                    UP</button>
-                <button class="bg-red-400 px-4 py-2 text-2xl whitespace-nowrap rounded-full text-white  hover:bg-red-500 duration-500">LOG
-                    IN</button>
-            </div>
-        </div>
-        </div>
-        <div class="text-black   text-lg lg:hidden px-2 ">
-            <i id="navbar-btn" class="fa-solid fa-bars"></i>
-          </div>
-    </nav>
-    <!-- home pages -->
-    <section class="lg:hidden md:hidden block">
-        <div class=" slider-2">
-            <div class=" w-full relative mx-auto">
-                <div class="container ml-20 mx-auto  z-20 absolute  flex flex-col justify-center  h-full gap-8 md:w-[33%] ">
-                    <div class=" relative">
-                        <div class="absolute ">
-                        <img class="navbarboob " src="assets/images/homebackleaf.png" alt="">
-                    </div>
-                            <img class="navbarboob w-20 top-20" src="assets/images/hero_shape_4.png" alt="">
-                            <div class="navbarboob absolute ">
-                                <img class="w-32 ml-40 " src="assets/images/hero_shape_8.png" alt="">
-                            </div>
-                            <img class="navbarboob absolute -top-20 -ml-24 -z-10" src="assets/images/homeredback.png" alt="">
-                    <h1 class="text-3xl font-bold  text-white tracking-wide -top-20 -ml-[10%] w-[70%]">WE SERVE THE TASTE,AS YOU LIKE <span class="text-[#ff9d2d] ">Food</span><img class="w-28 ml-16 py-2" src="assets/images/title_line.png" alt="" srcset=""> </h1>
-                    <div class="absolute w-32 ml-10">
-                        <img class="navbarboob" src="assets/images/hero_shape_7.png" alt="">
-                    </div>
-                    <div class="absolute ">
-                        <img class="navbarboob w-36 -ml-16" src="assets/images/hero_shape_5.png" alt="">
-                    </div>
-                    <div class="-ml-14">
-                    <button class="bg-orange-500 px-4 py-2 text-sm rounded-full text-white  hover:bg-red-500 duration-500 opacity-1">ORDER NOW</button>
-                </div>
-            </div>
-                </div>
-                <img class="w-full h-full" src="/assets/images/hero_bg_phone_1_1.jpg" alt="">
-                
-               
-                
-            </div>
-            <div class=" w-full relative mx-auto">
-                <div class="container ml-20 mx-auto  z-20 absolute  flex flex-col justify-center  h-full gap-8 md:w-[33%] ">
-                    <div class=" relative">
-                        <div class="absolute ">
-                        <img class="navbarboob " src="assets/images/homebackleaf.png" alt="">
-                    </div>
-                            <img class="navbarboob w-20 top-20" src="assets/images/hero_shape_4.png" alt="">
-                            <div class="navbarboob absolute ">
-                                <img class="w-32 ml-40 " src="assets/images/hero_shape_8.png" alt="">
-                            </div>
-                            <img class="navbarboob absolute -top-20 -ml-24 -z-10" src="assets/images/homeredback.png" alt="">
-                    <h1 class="text-3xl font-bold  text-white tracking-wide -top-20 -ml-[10%] w-[70%]">WE SERVE THE TASTE,AS YOU LIKE <span class="text-[#ff9d2d] ">Food</span><img class="w-28 ml-16 py-2" src="assets/images/title_line.png" alt="" srcset=""> </h1>
-                    <div class="absolute w-32 ml-10">
-                        <img class="navbarboob" src="assets/images/hero_shape_7.png" alt="">
-                    </div>
-                    <div class="absolute ">
-                        <img class="navbarboob w-36 -ml-16" src="assets/images/hero_shape_5.png" alt="">
-                    </div>
-                    <div class="-ml-14">
-                    <button class="bg-orange-500 px-4 py-2 text-sm rounded-full text-white  hover:bg-red-500 duration-500 opacity-1">ORDER NOW</button>
-                </div>
-            </div>
-                </div>
-                <img class="w-full h-full" src="/assets/images/hero_bg_phone_1_2.jpg" alt="">
-            </div> 
-            <div class=" w-full relative mx-auto">
-                <div class="container ml-20 mx-auto  z-20 absolute  flex flex-col justify-center  h-full gap-8 md:w-[33%] ">
-                    <div class=" relative">
-                        <div class="absolute ">
-                        <img class="navbarboob " src="assets/images/homebackleaf.png" alt="">
-                    </div>
-                            <img class="navbarboob w-20 top-20" src="assets/images/hero_shape_4.png" alt="">
-                            <div class="navbarboob absolute ">
-                                <img class="w-32 ml-40 " src="assets/images/hero_shape_8.png" alt="">
-                            </div>
-                            <img class="navbarboob absolute -top-20 -ml-24 -z-10" src="assets/images/homeredback.png" alt="">
-                    <h1 class="text-3xl font-bold  text-white tracking-wide -top-20 -ml-[10%] w-[70%]">WE SERVE THE TASTE,AS YOU LIKE <span class="text-[#ff9d2d] ">Food</span><img class="w-28 ml-16 py-2" src="assets/images/title_line.png" alt="" srcset=""> </h1>
-                    <div class="absolute w-32 ml-10">
-                        <img class="navbarboob" src="assets/images/hero_shape_7.png" alt="">
-                    </div>
-                    <div class="absolute ">
-                        <img class="navbarboob w-36 -ml-16" src="assets/images/hero_shape_5.png" alt="">
-                    </div>
-                    <div class="-ml-14">
-                    <button class="bg-orange-500 px-4 py-2 text-sm rounded-full text-white  hover:bg-red-500 duration-500 opacity-1">ORDER NOW</button>
-                </div>
-            </div>
-                </div>
-                <img class="w-full h-full" src="/assets/images/hero_bg_phone_1_3.jpg" alt="">
-            </div>
-        </div>
-    </section>
-    <section class="lg:block md:block hidden">
-        <div class=" slider-1">
-            <div class=" w-full relative mx-auto">
-                <div class="container ml-20 mx-auto  z-20 absolute  flex flex-col justify-center  h-full gap-8 md:w-[33%] ">
-                    <div class=" relative">
-                        <div class="absolute ">
-                        <img class="navbarboob" src="assets/images/homebackleaf.png" alt="">
-                    </div>
-                            <img class="navbarboob" src="assets/images/hero_shape_4.png" alt="">
-                            <div class="absolute ml-96 w-32 top-16">
-                                <img class="navbarboob " src="assets/images/hero_shape_5.png" alt="">
-                            </div>
-                            <div class="navbarboob absolute ml-96 -bottom-10">
-                                <img class=" top-10" src="assets/images/hero_shape_8.png" alt="">
-                            </div>
-                        <img class="navbarboob absolute -top-2 -ml-20 -z-10" src="assets/images/homeredback.png" alt="">
-                    <h1 class=" text-6xl font-bold  text-white tracking-wide">WE SERVE THE TASTE, AS YOU LIKE <span class="lobster-regular text-[#ff9d2d] ">Food</span><img class="w-60 ml-36 py-2" src="assets/images/title_line.png" alt="" srcset=""> </h1>
-                    <div class="absolute ml-32">
-                        <img class="navbarboob" src="assets/images/hero_shape_7.png" alt="">
-                    </div>
-                    <div class="absolute -ml-14">
-                        <img class="navbarboob top-10 " src="assets/images/hero_shape_5.png" alt="">
-                    </div>
-                    <div class="py-8 ">
-                    <button class="bg-orange-500 px-4 py-2 text-2xl rounded-full text-white  hover:bg-red-500 duration-500 opacity-1">ORDER NOW</button>
-                </div>
-            </div>
-                </div>
-                <img class="w-full" src="/assets/images/home1.jpg" alt="">
-            </div> <div class=" w-full relative mx-auto">
-                <div class="container ml-20 mx-auto  z-20 absolute  flex flex-col justify-center  h-full gap-8 md:w-[33%] ">
-                    <div class=" relative">
-                        <div class="absolute ">
-                            <img class="navbarboob" src="assets/images/homebackleaf.png" alt="">
-                        </div>
-                            <img class="navbarboob" src="assets/images/hero_shape_4.png" alt="">
-                            <div class="absolute ml-96 w-32 top-16">
-                                <img class="navbarboob top-10" src="assets/images/hero_shape_5.png" alt="">
-                            </div>
-                            <div class="navbarboob absolute ml-96 -bottom-10">
-                                <img class=" top-10" src="assets/images/hero_shape_8.png" alt="">
-                            </div>
-                        <img class="navbarboob absolute -top-10 -ml-20 -z-10" src="assets/images/homeredback.png" alt="">
-                    <h1 class=" text-5xl font-bold  text-white tracking-wide">YOU ALWAYS LIKE TASTE, OF YOUR FAST <span class=" lobster-regular text-[#ff9d2d] ">Food</span><img class="w-48 ml-28 py-2" src="assets/images/title_line.png" alt="" srcset=""></h1>
-                    <div class="absolute ml-32">
-                        <img class="navbarboob" src="assets/images/hero_shape_7.png" alt="">
-                    </div>
-                    <div class="absolute -ml-14">
-                        <img class="navbarboob top-10 " src="assets/images/hero_shape_5.png" alt="">
-                    </div>
-                    <div class="py-8">
-                    <button class="bg-orange-500 px-4 py-2 text-2xl rounded-full text-white  hover:bg-red-500 duration-500 opacity-1">ORDER NOW</button>
-                </div>
-            </div>
-                </div>
-                <img class="w-full" src="/assets/images/home2.jpg" alt="">
-            </div> <div class=" w-full relative mx-auto">
-                <div class="container ml-20 mx-auto  z-20 absolute  flex flex-col justify-center  h-full gap-8 md:w-[33%] ">
-                    <div class=" relative">
-                        
-                            <img class="navbarboob" src="assets/images/hero_shape_4.png" alt="">
-                            <div class="absolute ml-96 w-32 top-16">
-                                <img class="navbarboob top-10" src="assets/images/hero_shape_5.png" alt="">
-                            </div>
-                            <div class="navbarboob absolute ml-96 -bottom-10">
-                                <img class=" top-10" src="assets/images/hero_shape_8.png" alt="">
-                            </div>
-                        <img class="navbarboob absolute -top-10 -ml-20 -z-10" src="assets/images/homeredback.png" alt="">
-                    <h1 class=" text-5xl font-bold  text-white tracking-wide">WE PROVIDE BEST BEHAVIOUR AND YUMMY <span class="text-[#ff9d2d] lobster-regular">Food</span><img class="w-48 ml-48 py-2" src="assets/images/title_line.png" alt="" srcset=""> </h1>
-                    <div class="absolute ml-32">
-                        <img class="navbarboob" src="assets/images/hero_shape_7.png" alt="">
-                    </div>
-                    <div class="absolute -ml-14">
-                        <img class="navbarboob top-10 " src="assets/images/hero_shape_5.png" alt="">
-                    </div>
-                    <div class="py-8">
-                    <button class="bg-orange-500 px-4 py-2 text-2xl rounded-full text-white  hover:bg-red-500 duration-500 opacity-1">ORDER NOW</button>
-                </div>
-            </div>
-                </div>
-                <img class="w-full" src="/assets/images/home3.jpg" alt="">
-            </div>
-    </section>
-    <!-- discount page -->
-    <section class="py-10">
-       <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto">
-        <div class="flex px-8 ">
-            <img class="motion bg-red-200 rounded-full md:w-24 md:h-24 w-16 h-16  p-3 mt-4" src="assets/images/feature_1_1.svg" alt="">
-            <div class="p-4">
-            <h1 class="md:text-2xl text-xl text-gray-700">Discount Voucher</h1>
-            <p class="md:text-xl font-semibold text-gray-500 ">Competently orchestrate integrated schema for quickly create.</p>
-        </div>
-        <span class="home hidden lg:block md:block"></span>
-        </div>
-        <div class="flex px-8">
-            <img class="motion bg-red-200 rounded-full md:w-24 md:h-24 w-16 h-16  p-3 mt-4" src="assets/images/feature_1_2.svg" alt="">
-            <div class="p-4">
-            <h1 class="md::text-2xl text-xl text-gray-700">Discount Voucher</h1>
-            <p class="md:text-xl font-semibold text-gray-500 ">Competently orchestrate integrated schema for quickly create.</p>
-        </div>
-        <span class="home hidden lg:block md:block"></span>
-        </div>
-        <div class="flex px-8">
-            <img class="motion bg-red-200 rounded-full md:w-24 md:h-24 w-16 h-16  p-3 mt-4" src="assets/images/feature_1_3.svg" alt="">
-            <div class="p-4">
-            <h1 class="md:text-2xl text-xl text-gray-700">Discount Voucher</h1>
-            <p class="md:text-xl font-semibold text-gray-500  ">Competently orchestrate integrated schema for quickly create.</p>
-        </div>
-        </div>
-       </div>
-    </section>
-    <!-- aboute us -->
-    <section class=" py-10">
-        <div class="md:flex gap-96">
-        <div class="">
-            <img class="absolute ml-28 lg:mt-6 mt-8 md:w-[43%] w-[70%]" src="assets/images/about_1_1.png" alt="" srcset="">
-            <img class="md:w-[140vw] lg:h-[40vw] lg:w-[200vw]  w-[80%] h-[10%]" src="assets/images/bg_shape_1.png" alt="" srcset=""></div>
-        <div class="flex flex-col gap-3 py-10 px-2">
-           <h1 class="lobster-regular text-[#eb0029] font-bold flex md:gap-2 gap-4 lg:text-4xl md:text-3xl text-xl "> <img class="w-" src="assets/images/title_icon.svg" alt=""> About Us</h1>
-           <h1 class="lg:text-5xl md:text-4xl text-3xl font-bold px-2">Real Delicious Food Straight To Your Table</h1>
-           <p class="font-medium lg:text-xl md:text-xl text-gray-500 px-2">
-            Assertively envisioneer high-payoff architectures after interactive service. Collaboratively whiteboard pandemic intellectual capital without cross-platform channels.
-            </p>
-            <div class="md:flex py-10 gap-6">
-                <div class="flex justify-center items-center">
-                <img class="absolute w-16" src="assets/images/play-btn.png" alt="">
-                <img class="lg:w-[250vw] h-40" src="assets/images/black.jpg" alt="">
-            </div>
-                <div class="flex flex-col gap-3 lg:text-2xl md:text-xl text-lg py-4 font-medium whitespace-nowrap">
-                    <p><i class="fa fa-spoon -rotate-45 text-[#eb0029]"></i> Delicious & Healthy Foods</p>
-                    <p><i class="fa fa-spoon -rotate-45 text-[#eb0029]"></i> Spacific Family & Kids Zone</p>
-                    <p><i class="fa fa-spoon -rotate-45 text-[#eb0029]"></i> Best Price & Offers</p>
-                    <p><i class="fa fa-spoon -rotate-45 text-[#eb0029]"></i> Made By Fresh Ingredients</p>
-                    <p><i class="fa fa-spoon -rotate-45 text-[#eb0029]"></i> Music & Other Facilities</p>
-                </div>  
-            </div>
-            <div class="md:flex lg:flex grid grid-cols-2 lg:gap-6 gap-2 items-center py-10">
-                <div>
-            <button class="bg-[#eb0029] lg:px-8 lg:py-3  md:px-8 md:py-3  px-6 py-2 lg:text-2xl md:text-2xl text-xl rounded-full text-white hover:bg-red-700 duration-500">DISCOVER</button>  
-        </div>
-            <img class="rounded-full w-1/4" src="assets/images/team_1_2.jpg" alt="">
-            <p class="text-2xl font-semibold">OUR TEAM
-           <span class="text-xl whitespace-nowrap text-gray-500">CEO, of Pizzer Company</span> </p>
-        </div>
-        </div>
-    </div>
-    </section>
-    <section class="container ml-auto mr-auto">
-        <div class="absolute hidden lg:block md:block">
-        <img class=" top-40" src="assets/images/menu_bg_1.png" alt="">
-    </div>
-        <div class="menu">
-        </div>
-        <div class="lg:flex md:flex flex-col justify-center items-center gap-3 px-4">   
-           <h1 class="lobster-regular text-[#eb0029] font-bold flex md:gap-2 gap-4 lg:text-2xl md:text-2xl text-xl ">
-            <img class="w-8" src="assets/images/title_icon.svg" alt=""> OUR MENU</h1>
-            <h1 class="lg:text-5xl md:text-4xl text-3xl whitespace-nowrap font-bold px-2 ">Browse Our <span class="lobster-regular text-[#eb0029]">Menu</span></h1>
-           <p class="font-medium lg:text-xl md:text-xl text-gray-500  lg:w-1/2 md:w-1/2 lg:text-center md:text-center px-4">
-            Objectively pontificate quality models before intuitive information. Dramatically recaptiualize multifunctional materials.</p>
-        </div>
-        <div class="sliding py-10 px-16">
-            <div class="card  " data-swiper-slide-index="0" role="group" aria-label="1 / 5" style="width: 310px; margin-right: 25px;">
-                <div class="relative p-5 flex flex-col justify-center items-center">
-                    <span class="overlay"></span>
-                    <div class="card-image w-48">
-                        <img class="card-img " src="assets/images/menu_1_1-1.png" alt="">
-                    </div>
-                </div>
-                <div class="card-content flex flex-col justify-center items-center text-center gap-3 py-6 ">
-                    <h2 class="name text-2xl font-bold ">Daria Shevtsova</h2>
-                    <p class="description text-gray-500">Collaboratively predominate an expanded array of leadership rather than visionary.</p>
-                   <a href="./menu"><button class="button mt-4 px-6 py-2 bg-[#eb0029] text-white rounded-sm hover:bg-[#ff9d2d] duration-700">Browsw Menu</button></a>
-                </div>
-            </div>
-            <div class="card " data-swiper-slide-index="0" role="group" aria-label="1 / 5" style="width: 330px; margin-right: 25px;">
-                <div class="relative p-5 flex flex-col justify-center items-center">
-                    <span class="overlay"></span>
-                    <div class="card-image w-48">
-                        <img class="card-img " src="assets/images/menu_1_2.png" alt="">
-                    </div>
-                </div>
-                <div class="card-content flex flex-col justify-center items-center text-center gap-3 py-6">
-                    <h2 class="name text-2xl font-bold ">Daria Shevtsova</h2>
-                    <p class="description text-gray-500">Collaboratively predominate an expanded array of leadership rather than visionary.</p>
-                   <a href="./menu"><button class="button mt-4 px-6 py-2 bg-[#eb0029] text-white rounded-sm hover:bg-[#ff9d2d] duration-700">Browsw Menu</button></a>
-                </div>
-            </div>
-            <div class="card " data-swiper-slide-index="0" role="group" aria-label="1 / 5" style="width: 330px; margin-right: 25px;">
-                <div class="relative p-5 flex flex-col justify-center items-center">
-                    <span class="overlay"></span>
-                    <div class="card-image w-48 ">
-                        <img class="card-img " src="assets/images/menu_1_3.png" alt="">
-                    </div>
-                </div>
-                <div class="card-content flex flex-col justify-center items-center text-center gap-3 py-6">
-                    <h2 class="name text-2xl font-bold">Daria Shevtsova</h2>
-                    <p class="description text-gray-600">Collaboratively predominate an expanded array of leadership rather than visionary.</p>
-                   <a href="./menu"><button class="button mt-4 px-6 py-2 bg-[#eb0029] text-white rounded-sm hover:bg-[#ff9d2d] duration-700">Browsw Menu</button></a>
-                </div>
-            </div>
-            <div class="card " data-swiper-slide-index="0" role="group" aria-label="1 / 5" style="width: 330px; margin-right: 25px;">
-                <div class="relative p-5 flex flex-col justify-center items-center">
-                    <span class="overlay"></span>
-                    <div class="card-image w-48 ">
-                        <img class="card-img " src="assets/images/menu_1_1-1.png" alt="">
-                    </div>
-                </div>
-                <div class="card-content flex flex-col justify-center items-center text-center gap-3 py-6">
-                    <h2 class="name text-2xl font-bold">Daria Shevtsova</h2>
-                    <p class="description text-gray-600">Collaboratively predominate an expanded array of leadership rather than visionary.</p>
-                   <a href="./menu"><button class="button mt-4 px-6 py-2 bg-[#eb0029] text-white rounded-sm hover:bg-[#ff9d2d] duration-700">Browsw Menu</button></a>
-                </div>
-            </div>
-            <div class="card " data-swiper-slide-index="0" role="group" aria-label="1 / 5" style="width: 330px; margin-right: 25px;">
-                <div class="relative p-5 flex flex-col justify-center items-center">
-                    <span class="overlay"></span>
-                    <div class="card-image w-48 ">
-                        <img class="card-img " src="assets/images/menu_1_2.png" alt="">
-                    </div>
-                </div>
-                <div class="card-content flex flex-col justify-center items-center text-center gap-3 py-6">
-                    <h2 class="name text-2xl font-bold">Daria Shevtsova</h2>
-                    <p class="description text-gray-600">Collaboratively predominate an expanded array of leadership rather than visionary.</p>
-                   <a href="./menu"><button class="button mt-4 px-6 py-2 bg-[#eb0029] text-white rounded-sm hover:bg-[#ff9d2d] duration-700">Browsw Menu</button></a>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-    <section class=" bg-gray-950">
-        <div class="container ml-auto mr-auto flex gap-4 px-8 py-10 justify-center items-center">
-        <div class="flex flex-col gap-3 w-1/2">
-            <h1 class="lobster-regular text-[#eb0029] font-bold flex md:gap-2 gap-4 lg:text-2xl md:text-2xl text-xl ">
-                <img class="w-6" src="assets/images/title_icon.svg" alt=""> Why Choose US</h1>
-                <h1 class="lg:text-5xl md:text-4xl text-white text-3xl  font-bold px-2 ">
-                    We Make The Best Food In Our <span class="lobster-regular text-[#eb0029] font-bold"> Restaurant</span>
-                </h1>               
-                <p class="text-gray-400 text-xl font-medium">Assertively envisioneer high-payoff architectures after interactive service. Collaboratively whiteboard pandemic intellectual capital without cross-platform channels.</p>       
-     <div class="flex text-white gap-3">
-        <img class="w-20 motion" src="assets/images/feature_2_1.svg" alt="">
-        <div> 
-            <h1 class="text-2xl font-semibold">Buffet Service</h1>
-            <p class="text-gray-400 font-medium text-xl">Distinctively unleash client-base portals after cross platform information.</p>
-        </div>
-     </div>
-     <div class="flex text-white gap-3">
-        <img class="motion w-20" src="assets/images/feature_2_2.svg" alt="">
-        <div> 
-            <h1 class="text-2xl font-semibold">Cook & Sarve Faster</h1>
-            <p class="text-gray-400 font-medium text-xl">Distinctively unleash client-base portals after cross platform information.</p>
-           
-        </div>
-     </div>
-   
-     <span class="h-[1px] bg-gray-400 mt-4"></span>
-   
-     <div class="py-4">
-        <button class="bg-[#eb0029] lg:px-8 lg:py-2  md:px-8 md:py-2  px-6 py-2 lg:text-xl md:text-xl text-lg rounded-full text-white hover:bg-red-700 duration-500">Order Now</button>  
-    </div>
-            </div>
-      <div>
-     <div class="relative">   
-              <img class="" src="assets/images/why_1_1.png" alt="" srcset="">
-              <img class="absolute top-[79%]" src="assets/images/discount_bg_1.svg" alt="">
-              <h1 class="absolute font-bold text-2xl text-white ml-8 bottom-6">40%</h1>
-       <img class="tasty" src="assets/images/why_1_2.png" alt="">
-     
-     </div>
-  
-      </div>
-        
-    </div>
-    </section>
-    <section class="container ml-auto mr-auto py-10">
-        
-        <div class="flex justify-center items-center ">
-                <img  id="popular" class="w-64 " src="assets/images/leaf_1.png" alt="">   
-      <div class="flex flex-col justify-center items-center">
-        <h1 class="lobster-regular text-[#eb0029] font-bold flex items-center md:gap-2 gap-4 lg:text-2xl md:text-2xl text-xl ">
-            <img class="w-6" src="assets/images/title_icon.svg" alt=""> Popular Menu</h1>
-            <div class="flex items-center">
-            <h1 class="lg:text-5xl md:text-4xl  text-3xl  font-bold px-2 ">
-                Our Popular Delicious <span class="lobster-regular text-[#eb0029] font-bold"> Food</span>
-            </h1>    
-        </div>
-          <div class="flex gap-2 py-8">
-                <button class="bg-[#eb0029] whitespace-nowrap lg:px-8 lg:py-2 broder font-semibold md:px-8 md:py-2  px-6 py-2 lg:text-xl md:text-xl text-lg rounded-full text-white  duration-500">All Menu</button>  
-                <button class="hover:bg-[#eb0029] lg:px-8 lg:py-2 border border-gray-400 hover:border-[#eb0029]  font-semibold md:px-8 md:py-2  px-6 py-2 lg:text-xl md:text-xl text-lg rounded-full hover:text-white duration-700">Burger</button>  
-                <button class="hover:bg-[#eb0029] lg:px-8 lg:py-2  md:px-8 md:py-2 border border-gray-400 hover:border-[#eb0029] font-semibold  px-6 py-2 lg:text-xl md:text-xl text-lg rounded-full hover:text-white  duration-700">Chicken</button>  
-                <button class="hover:bg-[#eb0029] lg:px-8 lg:py-2  md:px-8 md:py-2 border border-gray-400 hover:border-[#eb0029] font-semibold px-6 py-2 lg:text-xl md:text-xl text-lg hover:text-white rounded-full hover:text-whit duration-700">Dosa</button>  
-                <button class="hover:bg-[#eb0029] lg:px-8 lg:py-2  md:px-8 md:py-2 border border-gray-400 hover:border-[#eb0029] font-semibold px-6 py-2 lg:text-xl md:text-xl text-lg rounded-full hover:text-white  duration-700">Pasta</button>
-                <button class="hover:bg-[#eb0029] lg:px-8 lg:py-2  md:px-8 md:py-2 border border-gray-400 hover:border-[#eb0029] font-semibold px-6 py-2 lg:text-xl md:text-xl text-lg rounded-full hover:text-white  duration-700">Vagetable</button>  
-            </div> 
-        </div>
-        <div id="popular">
-            <img class="w-72 " src="assets/images/red_chili.png" alt="" srcset="">
-        </div>
-    </div>
-    <div class="grid grid-cols-4 gap-4 py-28">
-        <div class="flex flex-col relative justify-center items-center  ">
-            <div class=" absolute -top-28">
-        <img class="w-60   " src="assets/images/image-7.png" alt="">
-    </div>
-        <div class="rounder flex flex-col justify-center  items-center border-2 gap-2 px-16 py-4  border-gray-200 shadow-xl rounded-t-3xl">
-            <h2 class=" text-xl mt-32 text-gray-400">Beef</h2>
-            <div class="text-orange-500">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-            </div>
-            <h1 class="text-2xl font-semibold">Bone Streak</h1>
-            <p class="lobster-regular text-[#eb0029] text-xl">1200 Rs </p>
-            <div class="py-3">
-            <button class="bg-[#eb0029] lg:px-8 lg:py-2 text-white md:px-8 md:py-2 hover:bg-orange-500  font-semibold px-6 py-2 lg:text-xl md:text-xl text-lg rounded-full hover:text-white  duration-700">Order Now</button>  
-        </div>
-    </div>
-    </div>
-    <div class="flex flex-col relative justify-center items-center  ">
-        <div class=" absolute -top-28">
-    <img class="w-60   " src="assets/images/image-15.png" alt="">
-</div>
-    <div class="rounder flex flex-col justify-center  items-center border-2 gap-2 px-16 py-4  border-gray-200 shadow-xl rounded-t-3xl">
-        <h2 class=" text-xl mt-32 text-gray-400">Beef</h2>
-        <div class="text-orange-500">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-        </div>
-        <h1 class="text-2xl font-semibold">Bone Streak</h1>
-        <p class="lobster-regular text-[#eb0029] text-xl">1200 Rs </p>
-        <div class="py-3">
-        <button class="bg-[#eb0029] lg:px-8 lg:py-2 text-white md:px-8 md:py-2 hover:bg-orange-500  font-semibold px-6 py-2 lg:text-xl md:text-xl text-lg rounded-full hover:text-white  duration-700">Order Now</button>  
-    </div>
-</div>
-</div>
-<div class="flex flex-col relative justify-center items-center  ">
-    <div class=" absolute -top-28">
-<img class="w-60   " src="assets/images/image-14.png" alt="">
-</div>
-<div class="rounder flex flex-col justify-center  items-center border-2 gap-2 px-16 py-4  border-gray-200 shadow-xl rounded-t-3xl">
-    <h2 class=" text-xl mt-32 text-gray-400">Beef</h2>
-    <div class="text-orange-500">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-    </div>
-    <h1 class="text-2xl font-semibold">Bone Streak</h1>
-    <p class="lobster-regular text-[#eb0029] text-xl">1200 Rs </p>
-    <div class="py-3">
-    <button class="bg-[#eb0029] lg:px-8 lg:py-2 text-white md:px-8 md:py-2 hover:bg-orange-500  font-semibold px-6 py-2 lg:text-xl md:text-xl text-lg rounded-full hover:text-white  duration-700">Order Now</button>  
-</div>
-</div>
-</div>
-<div class="flex flex-col relative justify-center items-center  ">
-    <div class=" absolute -top-28">
-<img class="w-60   " src="assets/images/image-21.png" alt="">
-</div>
-<div class="rounder flex flex-col justify-center  items-center border-2 gap-2 px-16 py-4  border-gray-200 shadow-xl rounded-t-3xl">
-    <h2 class=" text-xl mt-32 text-gray-400">Beef</h2>
-    <div class="text-orange-500">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-    </div>
-    <h1 class="text-2xl font-semibold">Bone Streak</h1>
-    <p class="lobster-regular text-[#eb0029] text-xl">1200 Rs </p>
-    <div class="py-3">
-    <button class="bg-[#eb0029] lg:px-8 lg:py-2 text-white md:px-8 md:py-2 hover:bg-orange-500  font-semibold px-6 py-2 lg:text-xl md:text-xl text-lg rounded-full hover:text-white  duration-700">Order Now</button>  
-</div>
-</div>
-</div>
-
-    </section>
-    <section class="container ml-auto mr-auto ">
-        <div class="grid grid-cols-4 gap-4 py-2">
-            <div class="flex flex-col relative justify-center items-center  ">
-                <div class=" absolute -top-28">
-            <img class="w-60   " src="assets/images/image-16.png" alt="">
-        </div>
-            <div class="rounder flex flex-col justify-center  items-center border-2 gap-2 px-16 py-4  border-gray-200 shadow-xl rounded-t-3xl">
-                <h2 class=" text-xl mt-32 text-gray-400">Beef</h2>
-                <div class="text-orange-500">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-                <h1 class="text-2xl font-semibold">Bone Streak</h1>
-                <p class="lobster-regular text-[#eb0029] text-xl">1200 Rs </p>
-                <div class="py-3">
-                <button class="bg-[#eb0029] lg:px-8 lg:py-2 text-white md:px-8 md:py-2 hover:bg-orange-500  font-semibold px-6 py-2 lg:text-xl md:text-xl text-lg rounded-full hover:text-white  duration-700">Order Now</button>  
-            </div>
-        </div>
-        </div>
-        <div class="flex flex-col relative justify-center items-center  ">
-            <div class=" absolute -top-28">
-        <img class="w-60   " src="assets/images/image-21.png" alt="">
-    </div>
-        <div class="rounder flex flex-col justify-center  items-center border-2 gap-2 px-16 py-4  border-gray-200 shadow-xl rounded-t-3xl">
-            <h2 class=" text-xl mt-32 text-gray-400">Beef</h2>
-            <div class="text-orange-500">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-            </div>
-            <h1 class="text-2xl font-semibold">Bone Streak</h1>
-            <p class="lobster-regular text-[#eb0029] text-xl">1200 Rs </p>
-            <div class="py-3">
-            <button class="bg-[#eb0029] lg:px-8 lg:py-2 text-white md:px-8 md:py-2 hover:bg-orange-500  font-semibold px-6 py-2 lg:text-xl md:text-xl text-lg rounded-full hover:text-white  duration-700">Order Now</button>  
-        </div>
-    </div>
-    </div>
-    <div class="flex flex-col relative justify-center items-center  ">
-        <div class=" absolute -top-28">
-    <img class="w-60   " src="assets/images/image-14.png" alt="">
-    </div>
-    <div class="rounder flex flex-col justify-center  items-center border-2 gap-2 px-16 py-4  border-gray-200 shadow-xl rounded-t-3xl">
-        <h2 class=" text-xl mt-32 text-gray-400">Beef</h2>
-        <div class="text-orange-500">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-        </div>
-        <h1 class="text-2xl font-semibold">Bone Streak</h1>
-        <p class="lobster-regular text-[#eb0029] text-xl">1200 Rs </p>
-        <div class="py-3">
-        <button class="bg-[#eb0029] lg:px-8 lg:py-2 text-white md:px-8 md:py-2 hover:bg-orange-500  font-semibold px-6 py-2 lg:text-xl md:text-xl text-lg rounded-full hover:text-white  duration-700">Order Now</button>  
-    </div>
-    </div>
-    </div>
-    <div class="flex flex-col relative justify-center items-center  ">
-        <div class=" absolute -top-28">
-    <img class="w-60   " src="assets/images/image-20.png" alt="">
-    </div>
-    <div class="rounder flex flex-col justify-center  items-center border-2 gap-2 px-16 py-4  border-gray-200 shadow-xl rounded-t-3xl">
-        <h2 class=" text-xl mt-32 text-gray-400">Beef</h2>
-        <div class="text-orange-500">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-        </div>
-        <h1 class="text-2xl font-semibold">Bone Streak</h1>
-        <p class="lobster-regular text-[#eb0029] text-xl">1200 Rs </p>
-        <div class="py-3">
-        <button class="bg-[#eb0029] lg:px-8 lg:py-2 text-white md:px-8 md:py-2 hover:bg-orange-500  font-semibold px-6 py-2 lg:text-xl md:text-xl text-lg rounded-full hover:text-white  duration-700">Order Now</button>  
-    </div>
-    </div>
-    <div class="absolute top-64 -ml-60">
-        <img class="w-48" src="assets/images/leaf_2.png" alt="">
-    </div>
-    </div>
-    </section>
-    <div class="flex justify-center items-center ">
-   <div class="py-6">
-    <button class="bg-[#eb0029] lg:px-8 lg:py-2 text-white md:px-8 md:py-2 hover:bg-orange-500  font-semibold px-6 py-2 lg:text-2xl md:text-xl text-lg rounded-full hover:text-white  duration-700">VEIW All MENU </button>  
-   </div>
-    </div>
+    <!-- home swction -->
     <section>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="relative hidden lg:block md:block carousel-inner">
+          <div class=" carousel-item active">
+            <img class="absolute animate top-5" src="assets/images/hero_shape_4.png" alt="" srcset="">
+            <img class="animate absolute" src="assets/images/homeredback.png" alt="" srcset="">
+                  
+            <div class="container h-screen flex flex-col justify-center absolute md:w-1/2 text-white text-6xl">
+                <h1 class="tracking-wide font-bold">WE SERVE THE TASTE, AS YOU LIKE <span class="food"> Food <img class="w-1/3 ml-36" src="assets/images/title_line.png" alt="" srcset=""></span></h1>
+              <img class="w-1/4 absolute top-20 ml-96 animate" src="assets/images/hero_shape_5.png" alt="" srcset="">
+                <img class="w-1/4 absolute top-72 ml-72 animate" src="assets/images/hero_shape_8.png" alt="" srcset="">
+                <button
+                class="bg-[#fa9016fd] lg:text-xl md:text-xl text-sm mr-auto lg:px-3 lg:py-2 md:px-3 md:py-2 px-2 py-1 text-white hover:bg-orange-400 rounded-3xl">ORDER NOW</button>
+            <img class="w-1/4 absolute bottom-16 -ml-10 animate" src="assets/images/hero_shape_5.png" alt="" srcset="">
+            <img class="w-1/4 absolute bottom-24 ml-48 animate" src="assets/images/hero_shape_7.png" alt="" srcset="">   
+            </div>
+
+            <img src="/assets/images/home1.jpg" class="d-block w-100" alt="...">
+           
+          </div>
+          <div class="carousel-item">
+            <div class=" carousel-item active">
+                <img class="absolute animate top-5" src="assets/images/hero_shape_4.png" alt="" srcset="">
+                <img class="animate absolute" src="assets/images/homeredback.png" alt="" srcset="">
+                      
+                <div class="container h-screen flex flex-col justify-center absolute md:w-1/2 text-white text-6xl">
+                    <h1 class="tracking-wide font-bold">YOU ALWAYS LIKE TASTE, OF YOUR FAST  <span class="food"> Food <img class="w-1/3 ml-80" src="assets/images/title_line.png" alt="" srcset=""></span></h1>
+                  <img class="w-1/4 absolute top-20 ml-96 animate" src="assets/images/hero_shape_5.png" alt="" srcset="">
+                    <img class="w-1/4 absolute top-72 ml-72 animate" src="assets/images/hero_shape_8.png" alt="" srcset="">
+                    <button
+                    class="bg-[#fa9016fd] lg:text-xl md:text-xl text-sm mr-auto lg:px-3 lg:py-2 md:px-3 md:py-2 px-2 py-1 text-white hover:bg-orange-400 rounded-3xl">ORDER NOW</button>
+                <img class="w-1/4 absolute bottom-16 -ml-10 animate" src="assets/images/hero_shape_5.png" alt="" srcset="">
+                <img class="w-1/4 absolute bottom-24 ml-48 animate" src="assets/images/hero_shape_7.png" alt="" srcset="">   
+                </div>
+            <img src="/assets/images/home2.jpg" class="d-block w-100" alt="...">
+          </div>
+          </div>
+          <div class="carousel-item">
+            <div class=" carousel-item active">
+                <img class="absolute animate top-5" src="assets/images/hero_shape_4.png" alt="" srcset="">
+                <img class="animate absolute" src="assets/images/homeredback.png" alt="" srcset="">
+                <div class="container h-screen flex flex-col justify-center absolute md:w-1/2 text-white text-6xl">
+                    <h1 class="tracking-wide font-bold">WE PROVIDE BEST BEHAVIOUR AND YUMMY <span class="food"> Food <img class="w-1/3 ml-80" src="assets/images/title_line.png" alt="" srcset=""></span></h1>
+                  <img class="w-1/4 absolute top-20 ml-96 animate" src="assets/images/hero_shape_5.png" alt="" srcset="">
+                    <img class="w-1/4 absolute top-72 ml-72 animate" src="assets/images/hero_shape_8.png" alt="" srcset="">
+                    <button
+                    class="bg-[#fa9016fd] lg:text-xl md:text-xl text-sm mr-auto lg:px-3 lg:py-2 md:px-3 md:py-2 px-2 py-1 text-white hover:bg-orange-400 rounded-3xl">ORDER NOW</button>
+                <img class="w-1/4 absolute bottom-16 -ml-10 animate" src="assets/images/hero_shape_5.png" alt="" srcset="">
+                <img class="w-1/4 absolute bottom-24 ml-48 animate" src="assets/images/hero_shape_7.png" alt="" srcset="">   
+                </div>
+            <img src="/assets/images/home3.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+      <!-- phone responsive -->
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="relative block lg:hidden md:hidden carousel-inner">
+          <div class=" carousel-item active">
+            <img class="absolute animate w-1/4" src="assets/images/hero_shape_4.png" alt="" srcset="">
+            <img class="animate absolute w-1/2 top-10" src="assets/images/homeredback.png" alt="" srcset="">         
+            <div class="container py-24 flex flex-col justify-center absolute md:w-1/2 text-white text-2xl">
+                <h1 class="tracking-wide font-bold">WE SERVE THE TASTE, AS YOU LIKE <span class="food"> Food <img class="w-1/3 mb-3" src="assets/images/title_line.png" alt="" srcset=""></span></h1>
+              <img class="w-1/4 absolute  top-10 ml-32 animate" src="assets/images/hero_shape_5.png" alt="" srcset="">
+                <img class="w-1/4 absolute top-72 ml-72 animate" src="assets/images/hero_shape_8.png" alt="" srcset="">
+                <button
+                class="bg-[#fa9016fd] lg:text-xl md:text-xl text-sm mr-auto lg:px-3 lg:py-2 md:px-3 md:py-2 px-2 py-1 text-white hover:bg-orange-400 rounded-3xl">ORDER NOW</button>
+            <img class="w-1/4 absolute bottom-8  animate" src="assets/images/hero_shape_5.png" alt="" srcset="">
+            <img class="w-1/3 absolute bottom-12 ml-20 animate" src="assets/images/hero_shape_7.png" alt="" srcset="">   
+            </div>
+            <img src="/assets/images/hero_bg_phone_1_1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <div class=" carousel-item active">
+                <img class="absolute animate w-1/4" src="assets/images/hero_shape_4.png" alt="" srcset="">
+                <img class="animate absolute w-1/2 top-10" src="assets/images/homeredback.png" alt="" srcset="">         
+                <div class="container py-24 flex flex-col justify-center absolute md:w-1/2 text-white text-2xl">
+                    <h1 class="tracking-wide font-bold">WE SERVE THE TASTE, AS YOU LIKE <span class="food"> Food <img class="w-1/3 mb-3" src="assets/images/title_line.png" alt="" srcset=""></span></h1>
+                  <img class="w-1/4 absolute  top-10 ml-32 animate" src="assets/images/hero_shape_5.png" alt="" srcset="">
+                    <img class="w-1/4 absolute top-72 ml-72 animate" src="assets/images/hero_shape_8.png" alt="" srcset="">
+                    <button
+                    class="bg-[#fa9016fd] lg:text-xl md:text-xl text-sm mr-auto lg:px-3 lg:py-2 md:px-3 md:py-2 px-2 py-1 text-white hover:bg-orange-400 rounded-3xl">ORDER NOW</button>
+                <img class="w-1/4 absolute bottom-8  animate" src="assets/images/hero_shape_5.png" alt="" srcset="">
+                <img class="w-1/3 absolute bottom-12 ml-20 animate" src="assets/images/hero_shape_7.png" alt="" srcset="">   
+                </div>
+                <img src="/assets/images/hero_bg_phone_1_2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <div class=" carousel-item active">
+                <img class="absolute animate w-1/4" src="assets/images/hero_shape_4.png" alt="" srcset="">
+                <img class="animate absolute w-1/2 top-10" src="assets/images/homeredback.png" alt="" srcset="">         
+                <div class="container py-24 flex flex-col justify-center absolute md:w-1/2 text-white text-2xl">
+                    <h1 class="tracking-wide font-bold">WE SERVE THE TASTE, AS YOU LIKE <span class="food"> Food <img class="w-1/3 mb-3" src="assets/images/title_line.png" alt="" srcset=""></span></h1>
+                  <img class="w-1/4 absolute  top-10 ml-32 animate" src="assets/images/hero_shape_5.png" alt="" srcset="">
+                    <img class="w-1/4 absolute top-72 ml-72 animate" src="assets/images/hero_shape_8.png" alt="" srcset="">
+                    <button
+                    class="bg-[#fa9016fd] lg:text-xl md:text-xl text-sm mr-auto lg:px-3 lg:py-2 md:px-3 md:py-2 px-2 py-1 text-white hover:bg-orange-400 rounded-3xl">ORDER NOW</button>
+                <img class="w-1/4 absolute bottom-8  animate" src="assets/images/hero_shape_5.png" alt="" srcset="">
+                <img class="w-1/3 absolute bottom-12 ml-20 animate" src="assets/images/hero_shape_7.png" alt="" srcset="">   
+                </div>
+                <img src="/assets/images/hero_bg_phone_1_2.jpg" class="d-block w-100" alt="...">    
+          </div>
+        </div>
+      </div>
     </section>
+      <!-- discont -->
+      <section class="lg:container grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 py-10">
+        <div class="flex gap-5 md:border-r-2 lg:px-6 py-2 px-2 md:border-gray-500 md:border-dashed">
+            <img class="motion bg-red-300 rounded-[50%] p-2 lg:h-20 h-16" src="assets/images/feature_1_1.svg" alt="" srcset="">
+            <div class="">
+            <h1 class="text-xl whitespace-nowrap">Discount Voucher</h1>
+            <p class="lg:text-lg text-sm ">Competently orchestrate integrated schema for quickly create.</p>
+        </div>
+        </div>
+        <div class="flex gap-5 md:border-r-2 lg:px-6 py-2 px-2 md:border-gray-500 md:border-dashed">
+            <img class="motion bg-red-300 rounded-[50%] p-2 lg:h-20 h-16" src="assets/images/feature_1_2.svg" alt="" srcset="">
+            <div>
+            <h1 class="text-xl whitespace-nowrap">Discount Voucher</h1>
+            <p class="lg:text-lg text-sm">Competently orchestrate integrated schema for quickly create.</p>
+        </div>
+        </div>
+        <div class="flex gap-5 lg:px-6 py-2 px-2">
+            <img class="motion bg-red-300 rounded-[50%] p-2 lg:h-20 h-16" src="assets/images/feature_1_3.svg" alt="" srcset="">
+            <div>
+            <h1 class="text-xl whitespace-nowrap">Discount Voucher</h1>
+            <p class="lg:text-lg text-sm">Competently orchestrate integrated schema for quickly create.</p>
+        </div>
+        </div>
+      </section>
+    <!--JQuery link-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>$(document).ready(function () {
+            $('#menu-navbar').click(function () {
+                $('#slide-navbar').slideToggle("slow");
+                $('#menu-navbar').toggleClass('fa-xmark fa-bars');
+            });
+        });</script>
+        <!-- slick slider -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
-        $('.slider-1').sli({
-            autoplay: true,
-        });
-    </script>
-     <script>
-        $('.slider-2').slick({
-            autoplay: true,
-        });
-    </script>
-    <script>
-        $('.sliding').slick({
-  dots:true,
-  arrows:true,
-  infinite:true,
-  autoplay:true,
-  speed:1600,
-  slidesToShow: 3,
-  slidesToScroll: 4,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]
-});
-    </script>
-     <script> 
-        $(document).ready(function(){
-         $('#navbar-menu').hide();
-         $('#navbar-btn').click(function(){
-           $('#navbar-menu').slideToggle('slow');
-         })
-        }) 
-             </script>
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 </body>
+
 </html>
