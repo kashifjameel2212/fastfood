@@ -8,6 +8,8 @@
     <!-- tailwind link -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/tailwind.js"></script>
+    <!-- cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!--Fonts link-->
   
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -35,13 +37,13 @@
                 </div>
             </div>
             <ul id="slide-navbar"
-                class="hidden lg:flex gap-8 lg:text-xl text-gray-500 md:text-lg text-sm items-center  lg:py-0 md:py-0 py-5">
+                class="hidden lg:flex gap-8 lg:text-xl text-gray-500 md:text-lg text-sm items-center ">
                 <li class="text-[#eb0029]">HOME</li>
                 <li class="hover:text-[#eb0029] whitespace-nowrap">ABOUT US</li>
                 <li class="hover:text-[#eb0029]">MENU</li>
                 <li class="hover:text-[#eb0029]">SHOP</li>
                 <li class="hover:text-[#eb0029] whitespace-nowrap">CONTACT US</li>
-                <div class="whitespace-nowrap lg:ml-32">
+                <div class="whitespace-nowrap lg:ml-32 py-2">
                     <button
                         class="bg-[#fa9016c5] lg:text-xl md:text-xl text-sm lg:px-3 lg:py-2 md:px-3 md:py-2 px-2 py-1 text-white hover:bg-orange-400 rounded-3xl">SIGN
                         UP</button>
@@ -67,7 +69,6 @@
           <div class=" carousel-item active">
             <img class="absolute animate top-5" src="assets/images/hero_shape_4.png" alt="" srcset="">
             <img class="animate absolute" src="assets/images/homeredback.png" alt="" srcset="">
-                  
             <div class="container h-screen flex flex-col justify-center absolute md:w-1/2 text-white text-6xl">
                 <h1 class="tracking-wide font-bold">WE SERVE THE TASTE, AS YOU LIKE <span class="food"> Food <img class="w-1/3 ml-36" src="assets/images/title_line.png" alt="" srcset=""></span></h1>
               <img class="w-1/4 absolute top-20 ml-96 animate" src="assets/images/hero_shape_5.png" alt="" srcset="">
@@ -77,15 +78,12 @@
             <img class="w-1/4 absolute bottom-16 -ml-10 animate" src="assets/images/hero_shape_5.png" alt="" srcset="">
             <img class="w-1/4 absolute bottom-24 ml-48 animate" src="assets/images/hero_shape_7.png" alt="" srcset="">   
             </div>
-
             <img src="/assets/images/home1.jpg" class="d-block w-100" alt="...">
-           
           </div>
           <div class="carousel-item">
             <div class=" carousel-item active">
                 <img class="absolute animate top-5" src="assets/images/hero_shape_4.png" alt="" srcset="">
                 <img class="animate absolute" src="assets/images/homeredback.png" alt="" srcset="">
-                      
                 <div class="container h-screen flex flex-col justify-center absolute md:w-1/2 text-white text-6xl">
                     <h1 class="tracking-wide font-bold">YOU ALWAYS LIKE TASTE, OF YOUR FAST  <span class="food"> Food <img class="w-1/3 ml-80" src="assets/images/title_line.png" alt="" srcset=""></span></h1>
                   <img class="w-1/4 absolute top-20 ml-96 animate" src="assets/images/hero_shape_5.png" alt="" srcset="">
@@ -163,34 +161,139 @@
                 <img src="/assets/images/hero_bg_phone_1_2.jpg" class="d-block w-100" alt="...">    
           </div>
         </div>
+        <div class="carousel-item">
+          <div class=" carousel-item active">
+              <img class="absolute animate w-1/4" src="assets/images/hero_shape_4.png" alt="" srcset="">
+              <img class="animate absolute w-1/2 top-10" src="assets/images/homeredback.png" alt="" srcset="">         
+              <div class="container py-24 flex flex-col justify-center absolute md:w-1/2 text-white text-2xl">
+                  <h1 class="tracking-wide font-bold">WE SERVE THE TASTE, AS YOU LIKE <span class="food"> Food <img class="w-1/3 mb-3" src="assets/images/title_line.png" alt="" srcset=""></span></h1>
+                <img class="w-1/4 absolute  top-10 ml-32 animate" src="assets/images/hero_shape_5.png" alt="" srcset="">
+                  <img class="w-1/4 absolute top-72 ml-72 animate" src="assets/images/hero_shape_8.png" alt="" srcset="">
+                  <button
+                  class="bg-[#fa9016fd] lg:text-xl md:text-xl text-sm mr-auto lg:px-3 lg:py-2 md:px-3 md:py-2 px-2 py-1 text-white hover:bg-orange-400 rounded-3xl">ORDER NOW</button>
+              <img class="w-1/4 absolute bottom-8  animate" src="assets/images/hero_shape_5.png" alt="" srcset="">
+              <img class="w-1/3 absolute bottom-12 ml-20 animate" src="assets/images/hero_shape_7.png" alt="" srcset="">   
+              </div>
+              <img src="/assets/images/hero_bg_phone_1_3.jpg" class="d-block w-100" alt="...">    
+        </div>
+      </div>
       </div>
     </section>
       <!-- discont -->
       <section class="lg:container grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 py-10">
-        <div class="flex gap-5 md:border-r-2 lg:px-6 py-2 px-2 md:border-gray-500 md:border-dashed">
-            <img class="motion bg-red-300 rounded-[50%] p-2 lg:h-20 h-16" src="assets/images/feature_1_1.svg" alt="" srcset="">
+        <div class="flex gap-5 items-center md:border-r-2 lg:px-6 py-2 px-2 md:border-gray-500 md:border-dashed">
+            <img class="motion bg-red-300 rounded-[50%] p-2 lg:h-20 h-16 " src="assets/images/feature_1_1.svg" alt="" srcset="">
             <div class="">
-            <h1 class="text-xl whitespace-nowrap">Discount Voucher</h1>
+            <h1 class="text-xl whitespace-nowrap font-bold">Discount Voucher</h1>
             <p class="lg:text-lg text-sm ">Competently orchestrate integrated schema for quickly create.</p>
         </div>
         </div>
-        <div class="flex gap-5 md:border-r-2 lg:px-6 py-2 px-2 md:border-gray-500 md:border-dashed">
+        <div class="flex gap-5 items-center md:border-r-2 lg:px-6 py-2 px-2 md:border-gray-500 md:border-dashed">
             <img class="motion bg-red-300 rounded-[50%] p-2 lg:h-20 h-16" src="assets/images/feature_1_2.svg" alt="" srcset="">
             <div>
-            <h1 class="text-xl whitespace-nowrap">Discount Voucher</h1>
+            <h1 class="text-xl whitespace-nowrap font-bold">Discount Voucher</h1>
             <p class="lg:text-lg text-sm">Competently orchestrate integrated schema for quickly create.</p>
         </div>
         </div>
-        <div class="flex gap-5 lg:px-6 py-2 px-2">
+        <div class="flex gap-5 items-center lg:px-6 py-2 px-2">
             <img class="motion bg-red-300 rounded-[50%] p-2 lg:h-20 h-16" src="assets/images/feature_1_3.svg" alt="" srcset="">
             <div>
-            <h1 class="text-xl whitespace-nowrap">Discount Voucher</h1>
+            <h1 class="text-xl whitespace-nowrap font-bold">Discount Voucher</h1>
             <p class="lg:text-lg text-sm">Competently orchestrate integrated schema for quickly create.</p>
         </div>
         </div>
       </section>
+    <!-- ABOUT -->
+    <section class="md:py-10">
+      <div class="md:flex md:gap-24">
+      <div class="relative">
+        <img class="absolute lg:h-[85%] h-60 lg:mt-4  lg:ml-24 ml-6" src="assets/images/about_1_1.png" alt="" srcset="">
+        <img class="lg:h-[90%] h-60 " src="assets/images/bg_shape_1.png" alt="" srcset="">
+      </div>
+      <div class="md:w-1/2 flex flex-col md:gap-4 px-2">
+        <h1 class="food flex items-center gap-3 lg:text-xl md:text-xl text-lg text-[#eb0029] p-2 whitespace-nowrap"><img src="assets/images/title_icon.svg" alt="" srcset=""> About us</h1>
+      <p class="lg:text-5xl font-bold md:text-4xl text-3xl">Real Delicious Food Straight To <span class="food text-[#eb0029]"> Your Table </span></p>
+      <p class="lg:text-lg md:text-lg text-sm font-medium text-gray-500">Assertively envisioneer high-payoff architectures after interactive service. Collaboratively whiteboard pandemic intellectual capital without cross-platform channels.</p>
+    <div class="md:flex gap-3 py-4">
+      <div class="flex flex-col justify-center items-center">
+      <img class="absolute h-16" src="assets/images/play-btn.png" alt="" srcset="">
+      <img src="assets/images/black.jpg" alt="" srcset="">
+    </div>
+    <div class="flex flex-col md:gap-4 gap-2 py-2 lg:text-lg md:text-lg text-sm font-semibold">
+      <h1><i class="fa-solid fa-spoon -rotate-45 text-[#eb0029]"></i> Delicious & Healthy Foods</h1>
+      <h1><i class="fa-solid fa-spoon -rotate-45 text-[#eb0029]"></i> Spacific Family & Kids Zone</h1>
+      <h1><i class="fa-solid fa-spoon -rotate-45 text-[#eb0029]"></i> Best Price & Offers</h1>
+      <h1><i class="fa-solid fa-spoon -rotate-45 text-[#eb0029]"></i> Made By Fresh Ingredients</h1>
+      <h1><i class="fa-solid fa-spoon -rotate-45 text-[#eb0029]"></i> Music & Other Facilities</h1>
+       </div>
+       </div>
+       <div class="py-2">
+       <hr></hr>
+      </div>
+       <div class="md:flex items-center justify-center gap-4">
+        <div>
+        <button class="bg-[#eb0029] lg:text-xl md:text-xl text-sm lg:px-4 lg:py-3 md:px-4 md:py-3 px-2 py-1  text-white  rounded-3xl">ORDER NOW</button>
+      </div>    
+        <img class="h-20  rounded-full" src="assets/images/me.JPG " alt="" srcset="">
+        <div>
+        <h1 class="text-xl">Basharat Ali</h1>
+          <p class="text-gray-500">CEO, of Pizzer Company</p>
+        </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    <!-- menu -->
+    <section class=" py-10">
+      <img class="absolute ml-6" src="assets/images/menu_bg_1.png" alt="" srcset="">
+      <div class="flex flex-col justify-center items-center gap-2">
+      <h1 class="food flex items-center gap-3 lg:text-xl md:text-xl text-lg text-[#eb0029] p-2 whitespace-nowrap"><img src="assets/images/title_icon.svg" alt="" srcset="">Our Menu</h1>
+      <p class="lg:text-5xl font-bold md:text-4xl text-3xl">Browse Our <span class="food text-[#eb0029]"> Menu </span></p>
+      <p class="lg:text-lg md:text-lg text-sm font-medium text-gray-500 w-1/2 text-center">Objectively pontificate quality models before intuitive information. Dramatically recaptiualize multifunctional materials.</p>
+    </div>
+<section class="slider-1  ">
+   <div class="container w-60 flex gap-3 py-10">
+    <div class="border border-gray-500  rounded-t-3xl">
+    <div class="flex flex-col justify-center items-center bg-orange-400 rounded-3xl py-2">
+       <img class="h-40 mt-2" src="assets/images/menu_1_1-1.png" alt="" srcset="">
+    </div>
+    <div class="flex flex-col justify-center  items-center bg-white py-2 gap-2">
+      <h1 class="font-bold text-xl">daira sonevngue</h1>
+      <p class="text-gray-500 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <div class="py-4">
+        <button class="bg-[#eb0029] lg:text-lg font-medium md:text-lg text-sm lg:px-4 lg:py-3 md:px-4 md:py-3 px-2 py-1  text-white  rounded-lg">Browsw Menu</button>
+      </div>
+     </div>
+    </div>
+    <div class="border border-gray-500  rounded-t-3xl">
+      <div class="flex flex-col justify-center items-center bg-orange-400 rounded-3xl py-2">
+         <img class="h-40 mt-2" src="assets/images/menu_1_1-1.png" alt="" srcset="">
+      </div>
+      <div class="flex flex-col justify-center  items-center bg-white py-2 gap-2">
+        <h1 class="font-bold text-xl">daira sonevngue</h1>
+        <p class="text-gray-500 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="py-4">
+          <button class="bg-[#eb0029] lg:text-lg font-medium md:text-lg text-sm lg:px-4 lg:py-3 md:px-4 md:py-3 px-2 py-1  text-white  rounded-lg">Browsw Menu</button>
+        </div>
+       </div>
+      </div>
+      <div class="border border-gray-500  rounded-t-3xl">
+        <div class="flex flex-col justify-center items-center bg-orange-400 rounded-3xl py-2">
+           <img class="h-40 mt-2" src="assets/images/menu_1_1-1.png" alt="" srcset="">
+        </div>
+        <div class="flex flex-col justify-center  items-center bg-white py-2 gap-2">
+          <h1 class="font-bold text-xl">daira sonevngue</h1>
+          <p class="text-gray-500 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div class="py-4">
+            <button class="bg-[#eb0029] lg:text-lg font-medium md:text-lg text-sm lg:px-4 lg:py-3 md:px-4 md:py-3 px-2 py-1  text-white  rounded-lg">Browsw Menu</button>
+          </div>
+         </div>
+        </div>
+
+  </div>
+</section>
+    </section>
     <!--JQuery link-->
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>$(document).ready(function () {
             $('#menu-navbar').click(function () {
@@ -202,6 +305,45 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+  $('.slider-1').slick({
+  dots: true,
+  autoplay:true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 2,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+  
+</script>
 </body>
 
 </html>
